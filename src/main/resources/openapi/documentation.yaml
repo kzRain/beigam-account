@@ -1,0 +1,36 @@
+openapi: "3.0.3"
+info:
+  title: "beigam_account API"
+  description: "beigam_account API"
+  version: "1.0.0"
+servers:
+- url: "https://beigam_account"
+paths:
+  /json/kotlinx-serialization:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Map"
+  /:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "Hello World!"
+components:
+  schemas:
+    Map:
+      type: "object"
+      properties: {}
